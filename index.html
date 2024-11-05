@@ -70,116 +70,155 @@
   </div>
   <!-- Botones para cambiar la vista -->
   <div class="container mt-4">
-    <div class="d-flex justify-content-center mb-3">
-      <button id="listViewBtn" class="btn btn-outline-primary me-2">
-        <i class="fas fa-list"></i>
-      </button>
-      <button id="gridViewBtn" class="btn btn-outline-primary">
-        <i class="fas fa-th"></i>
-      </button>
-    </div>
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="list-tab" data-bs-toggle="tab" data-bs-target="#list-view" type="button" role="tab" aria-controls="list-view" aria-selected="true"><i class="fas fa-list"></i></button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-view" type="button" role="tab" aria-controls="grid-view" aria-selected="false"><i class="fas fa-th"></i></button>
+      </li>
+    </ul>
   </div>
+
   <!-- Cards -->
-   <div class="container mt-4">
-    <div class="row">
-  <!-- Card 1 -->
-  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
-    <div class="d-flex justify-content-beetwen">
-    <h5 class="card-title ms-3 mt-4">My little puppy!</h5>
-    <span class="ms-auto mt-2 p-3">
-      <strong>10/03</strong>
-    </span>
+  <div class="container mt-4">
+    <div class="tab-content" id="myTabContent">
+        <!-- Lista -->
+        <div class="tab-pane fade show active list-view" id="list-view" role="tabpanel" aria-labelledby="list-tab">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-12 mb-4">
+              <div class="card">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title ms-3 mt-2">My little puppy!</h5>
+                  <span class="ms-auto mt-2"><strong>10/03</strong></span>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Beagle_Cachorro.JPG" class="card-img-top w-100" alt="Beagle puppy">
+                <div class="card-body">
+                  <span class="d-block p-3"><strong>786 likes</strong></span>
+                  <p class="card-text p-3">This is my dog, Rocky. He is a Beagle and he is 3 years old. He is very playful and loves to play with his toys. He is also very friendly and loves to be around people. He is my best friend and I love him very much. #dog #beagle #pet #puppy #cute</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-12 mb-4">
+              <div class="card">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title ms-3 mt-2">Forever</h5>
+                  <span class="ms-auto mt-2"><strong>12/03</strong></span>
+                </div>
+                <img src="https://www.protocolo.org/extfiles/procimg/cp-i-203-cG.14793.1.jpg" class="card-img-top w-100" alt="Image">
+                <div class="card-body">
+                  <span class="d-block p-3"><strong>1000 likes</strong></span>
+                  <p class="card-text p-3">This is my boyfriend, John. We have been together for 5 years and we are very happy together. He is my best friend and I love him very much. We enjoy spending time together and going on adventures. He is the love of my life and I am so grateful to have him in my life. #love #couple #forever #happy</p>
+                </div>
+              </div>
+            </div>
+             <!-- Card 3 -->
+             <div class="col-12 mb-4">
+              <div class="card">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title ms-3 mt-2">My favourite place</h5>
+                  <span class="ms-auto mt-2"><strong>20/03</strong></span>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg" class="card-img-top w-100" alt="Rainforest">
+                <div class="card-body">
+                  <span class="d-block p-3"><strong>998 likes</strong></span>
+                  <p class="card-text p-3">
+                    This is my favourite place in the world, the rainforest. I love the sounds of the birds and the monkeys, the smell of the trees and the flowers, and the feel of the warm, humid air on my skin. I feel so at peace and connected to nature when I am here. #rainforest #nature #peaceful #beautiful
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-12 mb-4">
+              <div class="card">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title ms-3 mt-2">My favourite food!</h5>
+                  <span class="ms-auto mt-2"><strong>22/03</strong></span>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg" class="card-img-top w-100" alt="Beagle puppy">
+                <div class="card-body">
+                  <span class="d-block p-3"><strong>9888 likes</strong></span>
+                  <p class="card-text p-3">
+                    This is my favourite food, pizza! I love the combination of the crispy crust, the tangy tomato sauce, the gooey cheese, and the delicious toppings. I could eat pizza every day and never get tired of it. #pizza #food #yum #delicious</p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-12 mb-4">
+              <div class="card">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title ms-3 mt-2">Views</h5>
+                  <span class="ms-auto mt-2"><strong>25/03</strong></span>
+                </div>
+                <img src="https://2.bp.blogspot.com/-Pa86y73ksMI/Uj7TikKK5UI/AAAAAAAAzUM/JLmvwnkFU1M/s1600/0089_cronicas_Thot_barcelona_festes_merce_focs_artificials_05.JPG" class="card-img-top w-100" alt="Beagle puppy">
+                <div class="card-body">
+                  <span class="d-block p-3"><strong>5908 likes</strong></span>
+                  <p class="card-text p-3">
+                    This is the view from my window. I love looking out at the city lights and the stars at night. It is so peaceful and beautiful. I feel so lucky to have this view and I never get tired of it. #view #city #night #beautiful</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-12 mb-4">
+              <div class="card">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-title ms-3 mt-2">I love you babe!</h5>
+                  <span class="ms-auto mt-2"><strong>28/03</strong></span>
+                </div>
+                <img src="https://i0.pickpik.com/photos/352/860/975/kissing-couple-romance-sunset-couple-preview.jpg" class="card-img-top w-100" alt="Beagle puppy">
+                <div class="card-body">
+                  <span class="d-block p-3"><strong>5908 likes</strong></span>
+                  <p class="card-text p-3">
+                    </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mosaico -->
+        <div class="tab-pane fade grid-view" id="grid-view" role="tabpanel" aria-labelledby="grid-tab">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Beagle_Cachorro.JPG" class="card-img-top w-100" alt="Beagle puppy">
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="https://www.protocolo.org/extfiles/procimg/cp-i-203-cG.14793.1.jpg" class="card-img-top w-100" alt="Image">
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg" class="card-img-top w-100" alt="Rainforest">
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg" class="card-img-top w-100" alt="Beagle puppy">
+              </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="https://2.bp.blogspot.com/-Pa86y73ksMI/Uj7TikKK5UI/AAAAAAAAzUM/JLmvwnkFU1M/s1600/0089_cronicas_Thot_barcelona_festes_merce_focs_artificials_05.JPG" class="card-img-top w-100" alt="Beagle puppy">
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://i0.pickpik.com/photos/352/860/975/kissing-couple-romance-sunset-couple-preview.jpg" class="card-img-top w-100" alt="Beagle puppy">
+          </div>
+      </div>
     </div>
-    <div class="card-body">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Beagle_puppy_Cadet.jpg" class="card-img-top img-fluid">
-        <span><strong>1003 likes</strong></span>
-        <p class="card-text"> 
-          This is my dog, Rocky. He is a Beagle and he is 3 years old. He is very playful and loves to play with his toys. He is also very friendly and loves to be around people. He is my best friend and I love him very much. #dog #beagle #pet #puppy #cute
-        </p>
-    </div>
-    </div>
-  <!-- Card 2 -->
-  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
-    <div class="d-flex justify-content-beetwen">
-    <h5 class="card-title ms-3 mt-4">Forever</h5>
-    <span class="ms-auto mt-2 p-3">
-      <strong>12/03</strong>
-    </span>
-    </div>
-    <div class="card-body">
-      <img src="https://www.protocolo.org/extfiles/procimg/cp-i-203-cG.14793.1.jpg" class="card-img-top img-fluid">
-      <span class="d-block"><strong>1000 likes</strong></span>
-      <p class="card-text">
-        This is my boyfriend, John. We have been together for 5 years and we are very happy together. He is my best friend and I love him very much. We enjoy spending time together and going on adventures. He is the love of my life and I am so grateful to have him in my life. #love #couple #forever #happy
-      </p>
-    </div>
-  </div>
-  <!-- Card 3 -->
-  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;"> 
-    <div class="d-flex justify-content-beetwen">
-    <h5 class="card-title ms-3 mt-4">Delicious!</h5>
-    <span class="ms-auto mt-2 p-3">
-      <strong>15/03</strong>
-    </span>
-    </div>
-    <div class="card-body">
-      <img src="https://rincondelchili.wordpress.com/wp-content/uploads/2012/11/comida-mexicana1.jpg" class="card-img-top img-fluid">
-      <span><strong>998 likes</strong></span>
-      <p class="card-text">
-        This is my favourite Mexican dish, enchiladas. They are made with corn tortillas filled with chicken, cheese, and beans, then rolled up and topped with a spicy tomato sauce and more cheese. They are delicious and I love to make them at home. They are the perfect comfort food and always hit the spot. #mexicanfood #enchiladas #comfortfood #delicious
-      </p>
-    </div>
-  </div>
-  <!-- Card 4 -->
-  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
-    <div class="d-flex justify-content-beetwen">
-    <h5 class="card-title ms-3 mt-4">My favourite place</h5>
-    <span class="ms-auto mt-2 p-3">
-      <strong>20/03</strong>
-    </span>
-    </div>
-    <div class="card-body">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg" class="card-img-top img-fluid">
-      <span><strong>1040 likes</strong></span>
-      <p class="card-text">
-        This is my favourite place in the world, the rainforest. I love to explore the rainforest and see all the amazing plants and animals that live there. It is so peaceful and beautiful, and I feel so connected to nature when I am there.  #rainforest #nature #peaceful #beautiful
-      </p>
-    </div>
-  </div>
-  <!-- Card 5 -->
-  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
-    <div class="d-flex justify-content-beetwen">
-    <h5 class="card-title ms-3 mt-4">Wow! Amazing views!</h5>
-    <span class="ms-auto mt-2 p-3">
-      <strong>25/03</strong>
-    </span>
-    </div>
-    <div class="card-body">
-      <img src="https://www.telemadrid.es/2019/09/18/noticias/madrid/Madrid-convocara-soterramiento-Gran-Via_2159794018_7264724_1300x731.jpg" class="card-img-top img-fluid">
-      <span><strong>2000 likes</strong></span>
-      <p class="card-text">
-        This is the view from my apartment in Madrid. I am so lucky to have such an amazing view of the city. I love to sit on my balcony and watch the sun set over the city. It is so beautiful and peaceful, and I feel so grateful to live in such a wonderful place. I love Madrid and all the amazing things it has to offer. #madrid #city #views #sunset
-      </p>
-    </div>
-  </div>
-  <!-- Card 6 -->
-  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
-    <div class="d-flex justify-content-beetwen">
-    <h5 class="card-title ms-3 mt-4">I love it babe! surprise</h5>
-    <span class="ms-auto mt-2 p-3">
-      <strong>30/03</strong>
-    </span>
-    </div>
-    <div class="card-body">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIJoP8DSEWKhMb5MbYJiyanZyCJW4Igd_U1yJDzleOQ6Htrg8qB85jnRNjPJ9K7Gnq1SX2gd6uM2XrKvzonsRtnb3Fz8mkbT0haNDCoUJyx6S-aJvWhJFfqAsxX1mCvwQ0URPn1EV5pqrK/s1600/9242373.JPEG" class="card-img-top img-fluid">
-      <span><strong>3000 likes</strong></span>
-      <p class="card-text">
-        This is the surprise that my boyfriend, John, gave me for my birthday. I was so surprised and happy, and I will never forget it. It was the best birthday present ever and I love him so much. #birthday #surprise #hotairballoon #love
-      </p>
-    </div>
-  </div>
-  </div>
-  </div>
   <!-- Footer -->
   <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
