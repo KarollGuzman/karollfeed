@@ -3,44 +3,185 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Instagram Bootstrap</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Instagram Feed With Bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <div>
-            <i style="font-size:24px" class="fa">&#xf083; Instagram </i>
-          </div>
-          <div class="d-flex">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <i class="fab fa-instagram fa-lg" style="color: #000000;"></i>
+          <a class="navbar-brand ms-2" href="#">Instagram</a>
+        </div>
+        <div class="d-flex align-items-center ms-auto">
+          <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create a new post
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div class="btn-group dropstart">
-                  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
-                  <i style="font-size:24px" class="fa">&#xf013;</i>
-                </div>
-                <ul class="dropdown-menu justify-content-between">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cog"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accessibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+              <div class="dropdown-divider"></div>
+              <li><a class="dropdown-item logout-item" href="#">Log out</a></li>
             </ul>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
+  
+  <!-- Modal -->
+   <div class="align-items-center">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Caption: 
+          <div class="input-group">
+            <textarea class="form-control" placeholder="Add the caption of your post here"></textarea>
+            </div> 
+        </div>
+        <!-- Button with icons -->
+        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group me-2 ms-3" role="group" aria-label="First group">
+            <button class="input-group-text" id="basic-addon3" id="camera"><i class="fas fa-camera" style="color: #000000;"></i>
+            </button>
+            <button class="input-group-text ms-2" id="basic-addon3"><i class="fas fa-map-marker-alt" style="color: #000000;"></i></button>
+          </div>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Y4R9o+E2+zF6p4xU5Kk5tBT5p9Ct" crossorigin="anonymous"></script>
+  </div>
+  </div>
+  <!-- Botones para cambiar la vista -->
+  <div class="container mt-4">
+    <div class="d-flex justify-content-center mb-3">
+      <button id="listViewBtn" class="btn btn-outline-primary me-2">
+        <i class="fas fa-list"></i>
+      </button>
+      <button id="gridViewBtn" class="btn btn-outline-primary">
+        <i class="fas fa-th"></i>
+      </button>
+    </div>
+  </div>
+  <!-- Cards -->
+   <div class="container mt-4">
+    <div class="row">
+  <!-- Card 1 -->
+  <div class="card m-auto mt-5 mb-3" style="width: 53%; height: 40%;">
+    <div class="d-flex justify-content-beetwen">
+    <h5 class="card-title ms-3 mt-4">My little puppy!</h5>
+    <span class="ms-auto mt-2 p-3">
+      <strong>10/03</strong>
+    </span>
+    </div>
+    <div class="card-body">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Beagle_puppy_Cadet.jpg" class="card-img-top img-fluid">
+        <span><strong>1003 likes</strong></span>
+        <p class="card-text"> 
+          This is my dog, Rocky. He is a Beagle and he is 3 years old. He is very playful and loves to play with his toys. He is also very friendly and loves to be around people. He is my best friend and I love him very much. #dog #beagle #pet #puppy #cute
+        </p>
+    </div>
+    </div>
+  <!-- Card 2 -->
+  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
+    <div class="d-flex justify-content-beetwen">
+    <h5 class="card-title ms-3 mt-4">Forever</h5>
+    <span class="ms-auto mt-2 p-3">
+      <strong>12/03</strong>
+    </span>
+    </div>
+    <div class="card-body">
+      <img src="https://www.protocolo.org/extfiles/procimg/cp-i-203-cG.14793.1.jpg" class="card-img-top img-fluid">
+      <span class="d-block"><strong>1000 likes</strong></span>
+      <p class="card-text">
+        This is my boyfriend, John. We have been together for 5 years and we are very happy together. He is my best friend and I love him very much. We enjoy spending time together and going on adventures. He is the love of my life and I am so grateful to have him in my life. #love #couple #forever #happy
+      </p>
+    </div>
+  </div>
+  <!-- Card 3 -->
+  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;"> 
+    <div class="d-flex justify-content-beetwen">
+    <h5 class="card-title ms-3 mt-4">Delicious!</h5>
+    <span class="ms-auto mt-2 p-3">
+      <strong>15/03</strong>
+    </span>
+    </div>
+    <div class="card-body">
+      <img src="https://rincondelchili.wordpress.com/wp-content/uploads/2012/11/comida-mexicana1.jpg" class="card-img-top img-fluid">
+      <span><strong>998 likes</strong></span>
+      <p class="card-text">
+        This is my favourite Mexican dish, enchiladas. They are made with corn tortillas filled with chicken, cheese, and beans, then rolled up and topped with a spicy tomato sauce and more cheese. They are delicious and I love to make them at home. They are the perfect comfort food and always hit the spot. #mexicanfood #enchiladas #comfortfood #delicious
+      </p>
+    </div>
+  </div>
+  <!-- Card 4 -->
+  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
+    <div class="d-flex justify-content-beetwen">
+    <h5 class="card-title ms-3 mt-4">My favourite place</h5>
+    <span class="ms-auto mt-2 p-3">
+      <strong>20/03</strong>
+    </span>
+    </div>
+    <div class="card-body">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Lowland_rainforest%2C_Masoala_National_Park%2C_Madagascar_%284026784053%29.jpg" class="card-img-top img-fluid">
+      <span><strong>1040 likes</strong></span>
+      <p class="card-text">
+        This is my favourite place in the world, the rainforest. I love to explore the rainforest and see all the amazing plants and animals that live there. It is so peaceful and beautiful, and I feel so connected to nature when I am there.  #rainforest #nature #peaceful #beautiful
+      </p>
+    </div>
+  </div>
+  <!-- Card 5 -->
+  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
+    <div class="d-flex justify-content-beetwen">
+    <h5 class="card-title ms-3 mt-4">Wow! Amazing views!</h5>
+    <span class="ms-auto mt-2 p-3">
+      <strong>25/03</strong>
+    </span>
+    </div>
+    <div class="card-body">
+      <img src="https://www.telemadrid.es/2019/09/18/noticias/madrid/Madrid-convocara-soterramiento-Gran-Via_2159794018_7264724_1300x731.jpg" class="card-img-top img-fluid">
+      <span><strong>2000 likes</strong></span>
+      <p class="card-text">
+        This is the view from my apartment in Madrid. I am so lucky to have such an amazing view of the city. I love to sit on my balcony and watch the sun set over the city. It is so beautiful and peaceful, and I feel so grateful to live in such a wonderful place. I love Madrid and all the amazing things it has to offer. #madrid #city #views #sunset
+      </p>
+    </div>
+  </div>
+  <!-- Card 6 -->
+  <div class="card m-auto mt-3 mb-3" style="width: 53%; height: 40%;">
+    <div class="d-flex justify-content-beetwen">
+    <h5 class="card-title ms-3 mt-4">I love it babe! surprise</h5>
+    <span class="ms-auto mt-2 p-3">
+      <strong>30/03</strong>
+    </span>
+    </div>
+    <div class="card-body">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIJoP8DSEWKhMb5MbYJiyanZyCJW4Igd_U1yJDzleOQ6Htrg8qB85jnRNjPJ9K7Gnq1SX2gd6uM2XrKvzonsRtnb3Fz8mkbT0haNDCoUJyx6S-aJvWhJFfqAsxX1mCvwQ0URPn1EV5pqrK/s1600/9242373.JPEG" class="card-img-top img-fluid">
+      <span><strong>3000 likes</strong></span>
+      <p class="card-text">
+        This is the surprise that my boyfriend, John, gave me for my birthday. I was so surprised and happy, and I will never forget it. It was the best birthday present ever and I love him so much. #birthday #surprise #hotairballoon #love
+      </p>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- Footer -->
+  <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
